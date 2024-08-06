@@ -10,7 +10,7 @@ Calculator App With Dart, Flutter, Material 3, Shared Preferences, Bloc, Testing
 <br/>
 
 <div align="center">
-  <a href="#description">Description</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp <a href="#install">Install</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp <a href="#technologies">Technologies</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp <a href="#related">Related</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp <a href="#contact">Contact</a>
+  <a href="#description">✍️ Description</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp <a href="#technologies">🚀 Technologies</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp <a href="#related">♟️ Related</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp <a href="#contact">✉️ Contact</a>
 </div>
 
 <br />
@@ -56,3 +56,7 @@ See more:
 
 <br />
 <br />
+
+<p align="center"><strong>Repository Link:</strong></p>
+
+[https://github.com/samueldecarvalhodeveloper/Calculator-App-With-Dart-Flutter-Material-3-Shared-Preferences-Bloc-Testing-Library-Get-It-Futures](https://github.com/samueldecarvalhodeveloper/Calculator-App-With-Dart-Flutter-Material-3-Shared-Preferences-Bloc-Testing-Library-Get-It-Futures)
