@@ -18,7 +18,7 @@ Calculator App With Dart, Flutter, Material 3, Shared Preferences, Bloc, Testing
 
 <h3 id="description">✍️ Description:</h3>
 
-<p>Working with Flutter to me is always a pleasure, all the library api are handy and easy to use; it is fast to create any kind of application with these tools. Creating a simple calculator app with a hexagonal approach, as this one, provides the glue of your idea and a robust, maintainable and reliable software and, being fair, dart reminds me of developing on javascript but with my beloved object-orienting fashion. Lovely</p>
+<p>Working with Flutter to me is always a pleasure, all the library api are handy and easy to use; it is fast to create any kind of application with these tools. Creating a simple calculator app with a hexagonal approach, as this one, provides the glue of your idea and a robust, maintainable and reliable software and, being fair, dart reminds me of developing on javascript but with my beloved object-orienting fashion. Lovely!</p>
 
 <br />
 
