@@ -12,7 +12,7 @@ void main() {
       String initialCalculationExpression =
           calculationExpression.calculationExpression;
 
-      expect(EMPTY_STRING, initialCalculationExpression);
+      expect(initialCalculationExpression, EMPTY_STRING);
 
       calculationExpression.calculationExpression = SIMPLE_EXPRESSION;
 
