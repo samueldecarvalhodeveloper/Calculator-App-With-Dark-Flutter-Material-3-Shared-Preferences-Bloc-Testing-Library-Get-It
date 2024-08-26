@@ -16,8 +16,8 @@ void main() {
               .isCalculationExpressionEqualToNotValidExpressionExceptionMessage(
                   SIMPLE_EXPRESSION);
 
-      expect(true, expressionIsNotValidExpressionExceptionMessage);
-      expect(false, expressionIsNotNotValidExpressionExceptionMessage);
+      expect(expressionIsNotValidExpressionExceptionMessage, true);
+      expect(expressionIsNotNotValidExpressionExceptionMessage, false);
     });
   });
 }
