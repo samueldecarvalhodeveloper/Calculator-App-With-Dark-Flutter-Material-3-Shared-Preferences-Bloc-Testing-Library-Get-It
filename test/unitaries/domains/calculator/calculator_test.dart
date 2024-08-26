@@ -30,7 +30,7 @@ void main() {
     });
 
     test(
-        "Test If Method \"getExpression\" Return Current Calculation Expression",
+        "Test If Method \"getExpression\" Returns Current Calculation Expression",
         () {
       String currentCalculationExpressionFromCalculationExpressionActiveRecord =
           calculator.getExpression();
