@@ -10,7 +10,7 @@ void main() {
       String evaluatedExpression =
           ExpressionEvaluater.getEvaluatedExpression(SIMPLE_EXPRESSION);
 
-      expect(EVALUATED_SIMPLE_EXPRESSION, evaluatedExpression);
+      expect(evaluatedExpression, EVALUATED_SIMPLE_EXPRESSION);
     });
 
     test(
@@ -18,7 +18,7 @@ void main() {
         () {
       String evaluatedExpression =
           ExpressionEvaluater.getEvaluatedExpression(NOT_VALID_EXPRESSION);
-      expect(NOT_VALID_EXPRESSION_ERROR_MESSAGE, evaluatedExpression);
+      expect(evaluatedExpression, NOT_VALID_EXPRESSION_ERROR_MESSAGE);
     });
   });
 }
