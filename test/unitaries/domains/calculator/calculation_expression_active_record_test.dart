@@ -48,7 +48,7 @@ void main() {
     });
 
     test(
-        "Test if Method \"turnCalculationExpressionEmpty\" Remove All Characters From Calculation Expression",
+        "Test if Method \"turnCalculationExpressionEmpty\" Removes All Characters From Calculation Expression",
         () {
       calculationExpressionRegister.setCalculationExpression(SIMPLE_EXPRESSION);
 
