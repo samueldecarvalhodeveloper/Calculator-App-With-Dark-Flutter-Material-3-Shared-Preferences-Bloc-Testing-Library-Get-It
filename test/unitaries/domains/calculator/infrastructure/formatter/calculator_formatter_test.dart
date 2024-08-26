@@ -11,8 +11,8 @@ void main() {
           CalculatorFormatter.getCalculationExpressionWithoutLastCharacter(
               SIMPLE_EXPRESSION);
 
-      expect(SIMPLE_EXPRESSION_WITHOUT_LAST_CHARACTER,
-          calculationExpressionWithoutLastCharacter);
+      expect(calculationExpressionWithoutLastCharacter,
+          SIMPLE_EXPRESSION_WITHOUT_LAST_CHARACTER);
     });
   });
 }
