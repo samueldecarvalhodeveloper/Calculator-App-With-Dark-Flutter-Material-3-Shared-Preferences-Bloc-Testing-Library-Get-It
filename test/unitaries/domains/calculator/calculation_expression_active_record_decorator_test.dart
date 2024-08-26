@@ -22,6 +22,10 @@ void main() {
               calculationExpressionRegister);
     });
 
+    setUp(() {
+      calculationExpressionRegister.setCalculationExpression(EMPTY_STRING);
+    });
+
     test(
         "Test If Method \"addCharacterToCalculationExpression\" Turns Expression Empty If Expression Is Equal To Not Valid Expression Exception Message",
         () {
@@ -40,8 +44,6 @@ void main() {
     test(
         "Test If Method \"addCharacterToCalculationExpression\" Adds Chose Character",
         () {
-      calculationExpressionRegister.setCalculationExpression(EMPTY_STRING);
-
       calculationExpressionActiveRecordDecorator
           .addCharacterToCalculationExpression(CalculatorCharacters.ONE);
 
@@ -69,8 +71,6 @@ void main() {
     test(
         "Test If Method \"removeLastCharacterFromCalculationExpression\" Keeps Expression Empty If It Is Empty",
         () {
-      calculationExpressionRegister.setCalculationExpression(EMPTY_STRING);
-
       calculationExpressionActiveRecordDecorator
           .removeLastCharacterFromCalculationExpression();
 
@@ -113,8 +113,6 @@ void main() {
     test(
         "Test If Method \"evaluateCalculationResultExpression\" Keeps Expression Empty If Expression Is Already Empty",
         () {
-      calculationExpressionRegister.setCalculationExpression(EMPTY_STRING);
-
       calculationExpressionActiveRecordDecorator
           .evaluateCalculationExpression();
 
