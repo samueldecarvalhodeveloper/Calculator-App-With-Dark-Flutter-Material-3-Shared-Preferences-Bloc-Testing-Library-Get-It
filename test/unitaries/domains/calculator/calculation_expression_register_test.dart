@@ -43,7 +43,7 @@ void main() {
     });
 
     test(
-        "Test If Method \"addCharacterToCalculationExpression\" Add Chose Character To Calculation Expression",
+        "Test If Method \"addCharacterToCalculationExpression\" Adds Chose Character To Calculation Expression",
         () {
       calculationExpressionRegister
           .addCharacterToCalculationExpression(CalculatorCharacters.ONE);
