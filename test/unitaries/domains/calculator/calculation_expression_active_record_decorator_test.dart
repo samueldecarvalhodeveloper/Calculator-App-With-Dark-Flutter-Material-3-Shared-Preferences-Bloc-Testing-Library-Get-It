@@ -38,7 +38,7 @@ void main() {
     });
 
     test(
-        "Test If Method \"addCharacterToCalculationExpression\" Add Chose Character",
+        "Test If Method \"addCharacterToCalculationExpression\" Adds Chose Character",
         () {
       calculationExpressionRegister.setCalculationExpression(EMPTY_STRING);
 
