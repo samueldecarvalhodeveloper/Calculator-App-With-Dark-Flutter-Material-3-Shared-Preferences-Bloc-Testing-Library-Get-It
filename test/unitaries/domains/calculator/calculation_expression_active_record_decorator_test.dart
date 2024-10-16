@@ -1,5 +1,4 @@
 import 'package:calculatorapp/constants/domains/calculator_constants.dart';
-import 'package:calculatorapp/constants/string_utilities_constants.dart';
 import 'package:calculatorapp/domains/calculator/calculation_expression.dart';
 import 'package:calculatorapp/domains/calculator/calculation_expression_active_record_decorator.dart';
 import 'package:calculatorapp/domains/calculator/calculation_expression_register.dart';
@@ -14,7 +13,7 @@ void main() {
 
     setUpAll(() {
       CalculationExpression calculationExpression =
-          CalculationExpression(EMPTY_STRING);
+          CalculationExpression("");
       calculationExpressionRegister =
           CalculationExpressionRegister(calculationExpression);
       calculationExpressionActiveRecordDecorator =
@@ -23,7 +22,7 @@ void main() {
     });
 
     setUp(() {
-      calculationExpressionRegister.setCalculationExpression(EMPTY_STRING);
+      calculationExpressionRegister.setCalculationExpression("");
     });
 
     test(
@@ -38,7 +37,7 @@ void main() {
       String currentCalculationExpression =
           calculationExpressionRegister.getCalculationExpression();
 
-      expect(currentCalculationExpression, EMPTY_STRING);
+      expect(currentCalculationExpression, "");
     });
 
     test(
@@ -65,7 +64,7 @@ void main() {
       String currentCalculationExpression =
           calculationExpressionRegister.getCalculationExpression();
 
-      expect(currentCalculationExpression, EMPTY_STRING);
+      expect(currentCalculationExpression, "");
     });
 
     test(
@@ -77,7 +76,7 @@ void main() {
       String currentCalculationExpression =
           calculationExpressionRegister.getCalculationExpression();
 
-      expect(currentCalculationExpression, EMPTY_STRING);
+      expect(currentCalculationExpression, "");
     });
 
     test(
@@ -107,7 +106,7 @@ void main() {
       String currentCalculationExpression =
           calculationExpressionRegister.getCalculationExpression();
 
-      expect(currentCalculationExpression, EMPTY_STRING);
+      expect(currentCalculationExpression, "");
     });
 
     test(
@@ -119,7 +118,7 @@ void main() {
       String currentCalculationExpression =
           calculationExpressionRegister.getCalculationExpression();
 
-      expect(currentCalculationExpression, EMPTY_STRING);
+      expect(currentCalculationExpression, "");
     });
 
     test(

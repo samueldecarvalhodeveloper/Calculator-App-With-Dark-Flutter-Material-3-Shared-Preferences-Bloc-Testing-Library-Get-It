@@ -1,5 +1,4 @@
 import 'package:calculatorapp/constants/domains/calculator_constants.dart';
-import 'package:calculatorapp/constants/string_utilities_constants.dart';
 import 'package:calculatorapp/domains/calculator/calculation_expression.dart';
 import 'package:calculatorapp/domains/calculator/calculation_expression_register.dart';
 import 'package:calculatorapp/domains/calculator/calculator_characters.dart';
@@ -11,13 +10,13 @@ void main() {
     late CalculationExpressionRegister calculationExpressionRegister;
 
     setUpAll(() {
-      calculationExpression = CalculationExpression(EMPTY_STRING);
+      calculationExpression = CalculationExpression("");
       calculationExpressionRegister =
           CalculationExpressionRegister(calculationExpression);
     });
 
     setUp(() {
-      calculationExpression.calculationExpression = EMPTY_STRING;
+      calculationExpression.calculationExpression = "";
     });
 
     test(

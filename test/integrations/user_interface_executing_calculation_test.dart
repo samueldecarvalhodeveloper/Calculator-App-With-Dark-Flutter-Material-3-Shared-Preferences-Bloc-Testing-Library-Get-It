@@ -1,5 +1,4 @@
 import 'package:calculatorapp/application/application.dart';
-import 'package:calculatorapp/constants/string_utilities_constants.dart';
 import 'package:calculatorapp/constants/user_interface_constants.dart';
 import 'package:calculatorapp/domains/calculator/calculation_expression.dart';
 import 'package:calculatorapp/domains/calculator/calculation_expression_active_record.dart';
@@ -15,7 +14,7 @@ void main() {
 
     setUpAll(() {
       CalculationExpression calculationExpression =
-          CalculationExpression(EMPTY_STRING);
+          CalculationExpression("");
       CalculationExpressionRegister calculationExpressionRegister =
           CalculationExpressionRegister(calculationExpression);
       CalculationExpressionActiveRecord calculationExpressionActiveRecord =
@@ -54,7 +53,7 @@ void main() {
 
       await tester.pump();
 
-      Finder viewfinderElement = find.text(EMPTY_STRING);
+      Finder viewfinderElement = find.text("");
 
       expect(viewfinderElement, findsOneWidget);
     });

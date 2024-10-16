@@ -1,6 +1,5 @@
 import 'package:calculatorapp/calculation_expression_store/calculation_expression_store.dart';
 import 'package:calculatorapp/constants/domains/calculator_constants.dart';
-import 'package:calculatorapp/constants/string_utilities_constants.dart';
 import 'package:calculatorapp/constants/user_interface_constants.dart';
 import 'package:calculatorapp/cubits/calculation_expression_cubit.dart';
 import 'package:calculatorapp/domains/calculator/calculation_expression.dart';
@@ -19,7 +18,7 @@ void main() {
 
     setUpAll(() {
       CalculationExpression calculationExpression =
-          CalculationExpression(EMPTY_STRING);
+          CalculationExpression("");
       CalculationExpressionRegister calculationExpressionRegister =
           CalculationExpressionRegister(calculationExpression);
       CalculationExpressionActiveRecord calculationExpressionActiveRecord =
@@ -48,7 +47,7 @@ void main() {
         "Test If Method \"addCharacter\" Adds Chose Character To Calculation Expression State, On Calculator And Calculation Expression Store",
         () async {
       Map<String, Object> sharedPreferencesMap = {
-        CALCULATION_EXPRESSION_KEY: EMPTY_STRING
+        CALCULATION_EXPRESSION_KEY: ""
       };
 
       SharedPreferences.setMockInitialValues(sharedPreferencesMap);
@@ -120,16 +119,16 @@ void main() {
       String storedCalculationExpression =
           await CalculationExpressionStore.getStoredExpression();
 
-      expect(currentCalculationExpressionOnCalculator, EMPTY_STRING);
-      expect(currentCalculationExpressionState, EMPTY_STRING);
-      expect(storedCalculationExpression, EMPTY_STRING);
+      expect(currentCalculationExpressionOnCalculator, "");
+      expect(currentCalculationExpressionState, "");
+      expect(storedCalculationExpression, "");
     });
 
     test(
         "Test If Method \"evaluate\" Evaluates Calculation Expression On State, Calculator And Calculation Expression Store",
         () async {
       Map<String, Object> sharedPreferencesMap = {
-        CALCULATION_EXPRESSION_KEY: EMPTY_STRING
+        CALCULATION_EXPRESSION_KEY: ""
       };
 
       SharedPreferences.setMockInitialValues(sharedPreferencesMap);

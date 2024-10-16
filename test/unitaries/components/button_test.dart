@@ -1,6 +1,5 @@
 import 'package:calculatorapp/components/button.dart';
 import 'package:calculatorapp/constants/domains/calculator_constants.dart';
-import 'package:calculatorapp/constants/string_utilities_constants.dart';
 import 'package:calculatorapp/styles/colors/neutrals_colors.dart';
 import 'package:calculatorapp/styles/colors/primary_colors.dart';
 import 'package:calculatorapp/user_interface_calculator_characters/user_interface_calculator_characters.dart';
@@ -13,7 +12,7 @@ void main() {
   group("Test Widget Button", () {
     testWidgets("Test If Widget Is Rendered And Dispatches Action When Tapped",
         (WidgetTester tester) async {
-      String changeableVariable = EMPTY_STRING;
+      String changeableVariable = "";
 
       await UserInterfaceComponentPumpingAdapter.pumpWidget(
           tester,

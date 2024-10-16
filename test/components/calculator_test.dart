@@ -1,5 +1,4 @@
 import 'package:calculatorapp/constants/domains/calculator_constants.dart';
-import 'package:calculatorapp/constants/string_utilities_constants.dart';
 import 'package:calculatorapp/domains/calculator/calculation_expression.dart';
 import 'package:calculatorapp/domains/calculator/calculation_expression_active_record.dart';
 import 'package:calculatorapp/domains/calculator/calculation_expression_active_record_decorator.dart';
@@ -15,7 +14,7 @@ void main() {
 
     setUpAll(() {
       CalculationExpression calculationExpression =
-          CalculationExpression(EMPTY_STRING);
+          CalculationExpression("");
       CalculationExpressionRegister calculationExpressionRegister =
           CalculationExpressionRegister(calculationExpression);
       calculationExpressionActiveRecord =
@@ -32,7 +31,7 @@ void main() {
     test("Test If Component Handles Data Input And Outputs Scenario", () {
       String initialCalculationExpression = calculator.getExpression();
 
-      expect(initialCalculationExpression, EMPTY_STRING);
+      expect(initialCalculationExpression, "");
 
       calculator.addCharacter(CalculatorCharacters.ONE);
       calculator.addCharacter(CalculatorCharacters.ADDITION);
@@ -52,7 +51,7 @@ void main() {
 
       String finalCalculationExpression = calculator.getExpression();
 
-      expect(finalCalculationExpression, EMPTY_STRING);
+      expect(finalCalculationExpression, "");
     });
   });
 }

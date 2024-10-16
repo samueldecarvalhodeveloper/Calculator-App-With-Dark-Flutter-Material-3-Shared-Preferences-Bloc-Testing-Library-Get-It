@@ -1,5 +1,4 @@
 import 'package:calculatorapp/constants/domains/calculator_constants.dart';
-import 'package:calculatorapp/constants/string_utilities_constants.dart';
 import 'package:calculatorapp/domains/calculator/calculation_expression.dart';
 import 'package:calculatorapp/domains/calculator/calculation_expression_active_record.dart';
 import 'package:calculatorapp/domains/calculator/calculation_expression_active_record_decorator.dart';
@@ -15,7 +14,7 @@ void main() {
 
     setUpAll(() {
       CalculationExpression calculationExpression =
-          CalculationExpression(EMPTY_STRING);
+          CalculationExpression("");
       CalculationExpressionRegister calculationExpressionRegister =
           CalculationExpressionRegister(calculationExpression);
       calculationExpressionActiveRecord =
@@ -81,7 +80,7 @@ void main() {
       String currentCalculationExpression =
           calculationExpressionActiveRecord.getCalculationExpression();
 
-      expect(currentCalculationExpression, EMPTY_STRING);
+      expect(currentCalculationExpression, "");
     });
 
     test("Test If Method \"evaluate\" Evaluates Calculation Expression", () {

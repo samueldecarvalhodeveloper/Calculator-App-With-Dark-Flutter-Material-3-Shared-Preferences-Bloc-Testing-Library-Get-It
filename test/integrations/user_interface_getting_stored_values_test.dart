@@ -1,7 +1,6 @@
 import 'package:calculatorapp/application/application.dart';
 import 'package:calculatorapp/calculation_expression_store/calculation_expression_store.dart';
 import 'package:calculatorapp/constants/domains/calculator_constants.dart';
-import 'package:calculatorapp/constants/string_utilities_constants.dart';
 import 'package:calculatorapp/constants/user_interface_constants.dart';
 import 'package:calculatorapp/domains/calculator/calculation_expression.dart';
 import 'package:calculatorapp/domains/calculator/calculation_expression_active_record.dart';
@@ -18,7 +17,7 @@ void main() {
 
     setUpAll(() {
       CalculationExpression calculationExpression =
-          CalculationExpression(EMPTY_STRING);
+          CalculationExpression("");
       CalculationExpressionRegister calculationExpressionRegister =
           CalculationExpressionRegister(calculationExpression);
       CalculationExpressionActiveRecord calculationExpressionActiveRecord =
