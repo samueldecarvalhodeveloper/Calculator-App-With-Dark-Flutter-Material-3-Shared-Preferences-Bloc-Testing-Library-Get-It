@@ -8,7 +8,7 @@ import 'package:calculatorapp/domains/calculator/calculator_characters.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  group("Test Calculator Component", () {
+  group("Test Component Calculator", () {
     late Calculator calculator;
     late CalculationExpressionActiveRecord calculationExpressionActiveRecord;
 
@@ -28,30 +28,75 @@ void main() {
       calculationExpressionActiveRecord.turnCalculationExpressionEmpty();
     });
 
-    test("Test If Component Handles Data Input And Outputs Scenario", () {
-      String initialCalculationExpression = calculator.getExpression();
+    test(
+        "Test If Calculation Expression Is Get",
+        () {
+      String currentCalculationExpressionFromCalculationExpressionActiveRecord =
+          calculator.getExpression();
+      String currentCalculationExpressionFromCalculator =
+          calculator.getExpression();
 
-      expect(initialCalculationExpression, "");
+      expect(currentCalculationExpressionFromCalculator,
+          currentCalculationExpressionFromCalculationExpressionActiveRecord);
+    });
 
+    test(
+        "Test Character Is Added To Calculation Expression",
+        () {
       calculator.addCharacter(CalculatorCharacters.ONE);
-      calculator.addCharacter(CalculatorCharacters.ADDITION);
-      calculator.addCharacter(CalculatorCharacters.ONE);
+
+      String currentCalculationExpression =
+          calculationExpressionActiveRecord.getCalculationExpression();
+
+      expect(currentCalculationExpression, CalculatorCharacters.ONE.value);
+    });
+
+    test(
+        "Test If Calculation Expression Last Character Is Removed",
+        () {
+      calculationExpressionActiveRecord
+          .addCharacterToCalculationExpression(CalculatorCharacters.ONE);
+      calculationExpressionActiveRecord
+          .addCharacterToCalculationExpression(CalculatorCharacters.ONE);
 
       calculator.backspace();
 
-      calculator.addCharacter(CalculatorCharacters.ONE);
+      String currentCalculationExpression =
+          calculationExpressionActiveRecord.getCalculationExpression();
 
-      calculator.evaluate();
+      expect(currentCalculationExpression, CalculatorCharacters.ONE.value);
+    });
 
-      String currentCalculationExpression = calculator.getExpression();
-
-      expect(currentCalculationExpression, EVALUATED_SIMPLE_EXPRESSION);
+    test(
+        "Test If Calculation Expression Is Cleaned",
+        () {
+      calculationExpressionActiveRecord
+          .addCharacterToCalculationExpression(CalculatorCharacters.ONE);
+      calculationExpressionActiveRecord
+          .addCharacterToCalculationExpression(CalculatorCharacters.ONE);
 
       calculator.clean();
 
-      String finalCalculationExpression = calculator.getExpression();
+      String currentCalculationExpression =
+          calculationExpressionActiveRecord.getCalculationExpression();
 
-      expect(finalCalculationExpression, "");
+      expect(currentCalculationExpression, "");
+    });
+
+    test("Test If Calculation Expression is Evaluated", () {
+      calculationExpressionActiveRecord
+          .addCharacterToCalculationExpression(CalculatorCharacters.ONE);
+      calculationExpressionActiveRecord
+          .addCharacterToCalculationExpression(CalculatorCharacters.ADDITION);
+      calculationExpressionActiveRecord
+          .addCharacterToCalculationExpression(CalculatorCharacters.ONE);
+
+      calculator.evaluate();
+
+      String currentCalculationExpression =
+          calculationExpressionActiveRecord.getCalculationExpression();
+
+      expect(currentCalculationExpression, EVALUATED_SIMPLE_EXPRESSION);
     });
   });
 }
